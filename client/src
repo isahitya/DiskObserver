@@ -1,0 +1,68 @@
+package com.thinking;
+import com.thinking.machines.nafclient.*;
+import com.thinking.machines.nafcomman.*;
+import com.library.*;
+import java.util.*;
+public class Main
+{
+public static void main(String[] gg)
+{
+int x;
+try
+{
+int []xx={1,2,2};
+aaa a[]=new aaa[3];
+a[0]=new aaa();
+a[1]=new aaa();
+a[2]=new aaa();
+a[0].setX(41);
+ccc c[]=new ccc[3];
+c[0]=new ccc();
+c[1]=new ccc();
+c[2]=new ccc();
+c[0].setA(a);
+c[1].setA(a);
+c[1].getA()[0].setX(111);
+c[1].getA()[1].setX(222);
+ccc c1=new ccc();
+c1.setA(a);
+ccc p[][][]=new ccc[2][2][2];
+p[0][0][0]=new ccc();
+p[0][1][1]=new ccc();
+p[1][0][0]=new ccc();
+p[1][1][1]=new ccc();
+p[0][0][0].setX(10);
+p[0][1][1].setX(10);
+p[1][0][0].setX(10);
+p[1][1][1].setX(10);
+LinkedList<String> list=new LinkedList<>();
+list.add("Nikhil");
+TMNAFClient client=new TMNAFClient("localhost",5000);
+client.process("/serviceA/list",list);
+for(String g:list)
+{
+System.out.println(g);
+}
+//client.process("/serviceA/dArray",p);
+//System.out.println(p[0][0][0].getX());
+//System.out.println(p[0][1][1].getX());
+//System.out.println(p[1][0][0].getX());
+//System.out.println(p[1][1][1].getX());
+//client.process("/serviceA/add",2,5);
+//client.process("/serviceA/doSomethingSilly",xx);
+//client.process("/serviceA/doSomethingGood",c);
+//System.out.println(c[1].getA()[0].getX()+"and"+c[1].getA()[1].getX());
+//client.process("/serviceA/doSomethingGreat",c1);
+//System.out.println(c1.getX()+"and "+c1.getA()[0].getX());
+//System.out.println(c1.getA()[0].getX());
+//client.process("/serviceA/doSomethingSilly",xx);
+for(int xy=0;xy<xx.length;xy++)
+{
+System.out.println(xx[xy]);
+}
+}catch(ApplicationException e)
+{
+System.out.println(e.getMessage());
+}
+}
+}

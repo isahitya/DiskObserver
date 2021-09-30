@@ -1,0 +1,18 @@
+package com.library;
+public class aaa implements java.io.Serializable
+{
+private int x;
+public aaa()
+{
+}
+public void setX(int x)
+{
+this.x=x;
+}
+public int getX()
+{
+return this.x;
+}
+
+
+}
